@@ -15,8 +15,9 @@ io.on("connection", (socket) => {
     console.log("ユーザーが接続しました");
 
     socket.on("chat message", (msg) => {
-      //  console.log("メッセージ:" + msg);
+      //  メッセージを受信
       io.emit("chat message", msg);
+      // 全員に送信
     });
 });
 

@@ -76,13 +76,13 @@
                 socket.emit("chat message", input.value);
                 input.value = "";
             }
-        });
+        }); // メッセージ送信
 
         socket.on("chat message", function(msg){
             let item = document.createElement("li");
             item.textContent = msg;
             messages.appendChild(item);
-        });
+        });  //メッセージ受信
 
     </script>
   </body>
